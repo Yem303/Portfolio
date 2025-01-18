@@ -1,0 +1,331 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.header{
+    width: 100%;
+    height: auto;
+    background-color: #212121;
+}
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.toggle{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 2rem;
+}
+.nav-logo img{
+    width: 70px;
+    height: 70px;
+}
+.nav-list{
+    gap: 50px;
+    width: 100%;
+}
+.nav-link{
+    margin-top: 10px;
+    list-style: none;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #fff;
+    border-bottom: 1px solid #625f5f;
+    transition: all 0.5s ease-in-out;
+}
+
+@media screen and (min-width: 700px)  {
+    .header{
+        padding: 20px 50px;
+    }
+    .nav-list{
+        display: flex;
+        width: auto;
+    }
+    .nav-link{
+        border: none;
+    }
+    .nav-link:hover{
+        text-decoration: underline;
+    }
+    
+    .toggle{
+        display: none;
+    }
+    .nav-logo img{
+        display: block;
+    }
+}
+.portfolio{
+    width: 80%;
+    margin: auto;
+    padding: 20px 50px;
+    margin-top: 100px;
+    display: flex;
+}
+ .content-left{
+    width: 35%;
+    /* background-color: chocolate; */
+    padding: 10px;
+}
+.content-left h1{
+    font-size: 2.5rem;
+    color: #fff;
+    margin-top: 20px;
+}
+/* .content-left span{
+    color: rgb(245, 180, 0);
+} */
+.main-text{
+    display: flex;
+}
+.main-text h3{
+    font-size: 24px;
+    margin-right: 10px;
+    color: #fff;
+    margin-top: 20px;
+}
+.main-text span{
+    font-size: 24px;
+    font-weight: 600;
+    /* color: #ff4c29; */
+    margin-top: 20px;
+    /* letter-spacing: 2px; */
+}
+.main-text span{
+    position: relative;
+}
+.main-text span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: #212121;
+    height: 40px;
+    border-left: 2px solid #ff4c29;
+    animation: typing 3s steps(11) infinite;
+}
+h1,h2{
+    font-size: 2.5rem;
+    margin-top: 10px;
+    color: #fff;
+}
+
+h4{
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+span{
+    background-image: linear-gradient(to right, red,green);
+    background-clip: text;
+    color: transparent;
+}
+button{
+    padding: 10px 40px;
+    margin-top: 30px;
+    border-radius: 20px;
+    color: darkcyan;
+    font-size: 1rem;
+    background-color: yellowgreen;
+    color: #212121;
+    transition: all 0.5s ease-in-out;
+    animation: zoom 0.4s ease-in-out infinite alternate ;
+}
+i{
+    margin-left: 10px;
+}
+button:hover{
+    border: 2px solid yellowgreen;
+    box-shadow: 0px 0px 10px yellowgreen; 
+    animation-play-state: paused;
+    background-color: #212121;
+    color: yellowgreen;
+}
+.icon i{
+    padding: 10px 12px;
+    font-size: 1rem;
+    color: #fff;
+    border: 2px solid #FFF;
+    border-radius: 50%;
+    margin: 10px;
+    animation: zoom .4s ease-in infinite alternate;
+    margin-top: 20px;
+   }
+.img{
+    width: 40%;
+    margin-left: 300px;
+}
+.img img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: drop-shadow(0pc 0px 20px rgb(82, 153, 224));
+    animation: rotat 0.5 ease-in-out infinite alternate;
+}
+
+@keyframes zoom{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }
+}
+
+@keyframes typing{
+    40%,
+    60%{
+        left: calc(100% + 5px);
+    }
+    100%{
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .portfolio {
+        width: 90%;
+        height: auto;
+        margin-top: 0;
+        /* margin-top: 50px; */
+        flex-direction: column; /* Stack portfolio items */
+        padding: 20px;
+    }
+
+    .content-left {
+        width: 100%; /* Full width on smaller screens */
+        text-align: center;
+    }
+
+    .img {
+       margin-left: 30px;
+       margin-top: 20px;
+    }
+
+    .img img {
+        width: 300px;
+        height: 300px
+    }
+
+    button {
+        width: 50%;
+        padding: 10px 0;
+    }
+
+    .main-text {
+        flex-direction: column; /* Stack text on smaller screens */
+        align-items: center;
+    }
+}
+
+.about_me{
+    width: 100%;
+    background-color: #212121;
+}
+.text{
+    color: #FFF;
+    text-align: center;
+    font-size: 2rem;
+    padding: 100px 0px;
+    text-decoration: underline yellowgreen;
+
+}
+.about_img{
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+.box-img{
+    width: 50%;
+}
+.about_img img{
+    width: 600px;
+    height: 400px;
+    margin: 10px 100px;
+    border-radius: 20px;
+    border: 5px solid yellowgreen;
+}
+.about_title{
+    width: 40%;
+    height: 395px;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: 2px solid yellowgreen;
+    border-radius: 20px;
+}
+.about_title h1{
+    font-size: 3rem;
+    text-align: center;
+    background-image: linear-gradient(to right, yellow, green,red);
+    background-clip: text;
+    color: transparent;
+}
+p{
+    color: #fff;
+    font-size: 30px;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+@media screen and (max-width: 700px) {
+    .about_img{
+        flex-direction: column-reverse;
+    }
+    p{
+        font-size: 20px;
+    }
+    .about_title h1{
+        font-size: 2rem;
+    }
+    .about_title{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .box-img {
+        width: 100%;
+    }
+    .about_img img{
+        margin: 20px 0px;
+        width: 100%;
+    }
+    .text{
+        margin-top: 5px;
+    }
+}
+
+.All-skill{
+    width: 100%;
+    height: 100vh;
+    background-color: #212121;
+}
+.content-card{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    gap: 1rem;
+}
+.content-card .card{
+    width: 200px;
+    height: 200px;
+    background-color: #302f2f;
+    border-radius: 20px;
+}
+.text1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    color: yellow;
+    text-decoration: underline yellowgreen;
+}
