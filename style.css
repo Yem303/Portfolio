@@ -329,3 +329,16 @@ p{
     color: yellow;
     text-decoration: underline yellowgreen;
 }
+
+@media screen and (max-width: 600px) {
+    .All-skill{
+        height: auto;
+    }
+    .content-card{
+        flex-direction: column;
+    }
+    .content-card .card{
+        width: 100%;
+        height: auto;
+    }
+}
